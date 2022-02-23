@@ -1,38 +1,37 @@
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
+- [Architect Docs](https://arc.codes)
 
 ## Architect Setup
 
-When deploying to AWS Lambda with Architect, you'll need:
+When deploying to AWS Lambda with Architect, you'll need the AWS SDK.
 
-- Architect (`arc`) CLI
-- AWS SDK
-
-Architect recommends installing these globally:
+Architect recommends installing `aws-sdk` globally:
 
 ```sh
-$ npm i -g @architect/architect aws-sdk
+$ npm install --global aws-sdk
 ```
 
 ## Development
 
+```
+npm install # in case you haven't already
+```
+
 You will be running two processes during development when using Architect as your server.
 
-- Your Architect server sandbox in one
-- The Remix development server in another
+- Your Architect Sandbox server to emulate AWS
+- The Remix watch process to build your Remix app
 
 ```sh
-# in one tab
-$ arc sandbox
-
-# in another
+# these can be run simultaneously with:
 $ npm run dev
 ```
 
-Open up [http://localhost:3333](http://localhost:3333) and you should be ready to go!
+* You may need to exit this command twice (ctrl + c) to end both processes.
 
-If you'd rather run everything in a single tab, you can look at [concurrently](https://npm.im/concurrently) or similar tools to run both processes in one tab.
+Open up [http://localhost:3333](http://localhost:3333) and you should be ready to go!
 
 ## Deploying
 
@@ -52,7 +51,7 @@ If you make it through all of that, you're ready to deploy!
 2. Deploy with `arc`
 
    ```sh
-   $ arc deploy production
+   $ npx arc deploy production
    ```
 
 You're in business!

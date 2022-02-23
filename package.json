@@ -21,6 +21,7 @@
     "remix": "^1.2.2"
   },
   "devDependencies": {
+    "@architect/architect": "^9.5.4",
     "@remix-run/dev": "^1.2.2",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
